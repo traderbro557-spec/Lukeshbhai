@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sunil Trader Official</title>
+
+  <!-- Montserrat font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg1:#0d0d0d;
+      --bg2:#1b2735;
+      --bg3:#090a0f;
+      --accent:#ff6f61;
+      --accent2:#4facfe;
+      --radius:22px;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:'Montserrat',sans-serif;
+      color:#fff;
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+      background-size:400% 400%;
+      animation:bgAnim 18s ease infinite;
+      padding:30px 10px;
+      position:relative;
+      overflow-x:hidden;
+    }
+
+    /* moving glowing circles */
+    body::before,body::after{
+      content:"";
+      position:absolute;
+      border-radius:50%;
+      filter:blur(120px);
+      opacity:0.35;
+      z-index:0;
+    }
+    body::before{
+      width:380px;height:380px;
+      top:-120px;left:-100px;
+      background:var(--accent);
+      animation:float1 20s linear infinite;
+    }
+    body::after{
+      width:420px;height:420px;
+      bottom:-150px;right:-120px;
+      background:var(--accent2);
+      animation:float2 22s linear infinite;
+    }
+
+    @keyframes bgAnim{
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    @keyframes float1{0%{transform:translateY(0)}50%{transform:translateY(60px)}100%{transform:translateY(0)}}
+    @keyframes float2{0%{transform:translateY(0)}50%{transform:translateY(-60px)}100%{transform:translateY(0)}}
+
+    .container{
+      width:100%;max-width:430px;z-index:1;
+    }
+
+    .card{
+      background:rgba(255,255,255,0.05);
+      border-radius:var(--radius);
+      padding:36px 28px;
+      border:1px solid rgba(255,255,255,0.1);
+      backdrop-filter:blur(18px);
+      box-shadow:0 8px 30px rgba(0,0,0,0.6);
+      text-align:center;
+      position:relative;
+    }
+
+    .avatar{
+      width:110px;height:110px;
+      border-radius:50%;
+      margin:-72px auto 14px;
+      overflow:hidden;
+      border:5px solid var(--accent2);
+      box-shadow:0 0 25px rgba(79,172,254,0.5);
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover;}
+
+    h1{
+      font-size:28px;
+      font-weight:700;
+      margin-bottom:6px;
+      color:var(--accent2);
+      text-shadow:0 0 14px rgba(79,172,254,0.4);
+    }
+    .subtitle{
+      font-size:14px;
+      color:#cfd6e4;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:block;
+      padding:14px;
+      border-radius:40px;
+      font-weight:600;
+      text-decoration:none;
+      margin-bottom:14px;
+      transition:0.3s;
+    }
+    .btn-orange{
+      background:linear-gradient(90deg,#ff6f61,#ff9966);
+      color:#fff;
+      box-shadow:0 0 20px rgba(255,111,97,0.5);
+    }
+    .btn-green{
+      background:linear-gradient(90deg,#4facfe,#00f2fe);
+      color:#001;
+      box-shadow:0 0 20px rgba(79,172,254,0.4);
+    }
+    .btn:hover{transform:scale(1.04)}
+
+    .section{
+      margin-top:28px;
+      padding:24px;
+      border-radius:var(--radius);
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 6px 20px rgba(0,0,0,0.5);
+    }
+    .section h2{
+      font-size:26px;
+      text-align:center;
+      margin-bottom:20px;
+      color:var(--accent);
+      text-shadow:0 0 12px rgba(255,111,97,0.4);
+    }
+
+    .feature{
+      display:flex;gap:14px;
+      background:rgba(255,255,255,0.04);
+      border-radius:14px;
+      padding:14px;margin-bottom:14px;
+    }
+    .feature .icon{font-size:20px}
+    .feature h3{margin:0;font-size:16px;color:var(--accent2);}
+    .feature p{margin:4px 0 0;font-size:13px;color:#cfd6e4;}
+
+    .disclaimer{
+      margin-top:18px;
+      font-size:12px;
+      line-height:1.4;
+      padding:14px;
+      background:rgba(0,0,0,0.35);
+      border-radius:10px;
+      border-left:4px solid var(--accent);
+      color:#b5bcd6;
+    }
+    .disclaimer strong{color:#fff;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="avatar">
+        <img src="https://i.ibb.co/cKCnQ4R5/cropped-circle-image-15.png" alt="Profile">
+      </div>
+      <h1>Sunil Trader</h1>
+      <div class="subtitle">Daily Nifty &amp; Bank Nifty Market Updates</div>
+
+      <a href="https://t.me/+ECsPJCERkPcxNTY1" class="btn btn-orange">🚀 Join Free Channel</a>
+      <a href="https://t.me/+ECsPJCERkPcxNTY1" class="btn btn-green">✅ Join Now</a>
+    </div>
+
+    <div class="section">
+      <h2>Why Join Us?</h2>
+
+      <div class="feature">
+        <div class="icon">📊</div>
+        <div>
+          <h3>Daily Market Levels</h3>
+          <p>Free Nifty &amp; Bank Nifty levels every day.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="icon">🎓</div>
+        <div>
+          <h3>Educational Focus</h3>
+          <p>Learn concepts, not tips — grow real knowledge.</p>
+        </div>
+      </div>
+
+      <div class="feature">
+        <div class="icon">👥</div>
+        <div>
+          <h3>50K+ Members</h3>
+          <p>Join a trusted trading community.</p>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <strong>Disclaimer:</strong> This channel is for education only. Stock market is risky. Please consult a financial advisor before investing.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
